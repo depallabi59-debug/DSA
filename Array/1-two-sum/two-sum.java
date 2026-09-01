@@ -1,18 +1,24 @@
 class Solution {
     public int[] twoSum(int[] nums, int target) {
-        int[] sol=new int[2];
-        for(int i=0;i<nums.length;i++){
-            int k=target-nums[i];
-        for(int j=i+1;j<nums.length;j++){
-                if(nums[j]==k){
-                    sol[0]=i;
-                    sol[1]=j;
-                }
-            }
-        }
-        return sol;
+       int lp=0;
+       int hp=nums.length-1;
+       int[] sol=new int[2];
+       while(lp<=hp){
+          if(nums[lp]+nums[hp]==target ){
+            sol[0]=lp;
+            sol[1]=hp;
+             break;
+          }
+          hp--;
+          if(hp==lp){
+            hp=nums.length-1;
+            lp++;
+
+          }
+       }
+       return sol;
     }
 
-        
+
     
 }
