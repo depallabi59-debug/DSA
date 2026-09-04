@@ -11,7 +11,6 @@ class Solution {
             if( j>i+1 && nums[j]==nums[j-1]){
                 continue;
             }
-          //  long target2=(long) target -((long) nums[i]+(long) nums[j]);
             int k=j+1;
             int l=nums.length-1;
             while(k<l){
