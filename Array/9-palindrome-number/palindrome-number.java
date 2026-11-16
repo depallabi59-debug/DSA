@@ -4,9 +4,9 @@ class Solution {
         int rev=0;
     
         while(c>0){
-            int  rem=c%10;
+             
+             rev=(rev*10)+(c%10);
              c=c/10;
-             rev=rev*10+rem;
         }
         if(rev==x){
             return true;
